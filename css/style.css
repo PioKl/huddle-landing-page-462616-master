@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "header-logo header-logo header-button header-button""build-section build-section build-section build-section""build-image build-image build-image build-image""info info info-image info-image""ready-section ready-section ready-section ready-section""footer footer footer footer";
+    background-color: white;
+    justify-items: center;
+    /* wszystkie section wysrodkuje, jak pojedyncze to np w header-logo justify-content */
+
+    margin-top: 5%;
+
+    /* 
+    grid-template-areas: "header-logo . . header-button""build-section build-section build-section build-section""build-image build-image build-image build-image""info info info-image info-image""ready-section ready-section ready-section ready-section""footer footer footer footer"; */
+
+
+    /* grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "header-logo . . header-button""build-section build-section build-section build-section""build-image build-image build-image build-image""info info info-image info-image""ready-section ready-section ready-section ready-section""logo-social contact-left-side contact-right-side subscribe""copyright copyright copyright copyright"; */
+}
+
+/* HEADER SECTION */
+.header-logo {
+    grid-area: header-logo;
+    justify-self: start;
+    padding-left: 4.5%;
+    /* background-color: red; */
+}
+
+.header-button {
+    grid-area: header-button;
+    padding-right: 4.5%;
+    justify-self: end;
+    /* background-color: rgb(0, 217, 255); */
+}
+
+.tryButton {
+    background-color: #fafafa;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border: 1px solid #e6aae6;
+    display: inline-block;
+    cursor: pointer;
+    color: #f0c0f0;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 1rem 2.93rem;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #e63ee6;
+    outline: none;
+    white-space: nowrap;
+    /* zeby tekst Try it Free sie nie zawijal*/
+}
+
+.tryButton:hover {
+    background-color: #f0c0f0;
+    color: white;
+}
+
+.tryButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* BUILD SECTIOn */
+.build-section {
+    grid-area: build-section;
+    text-align: center;
+    padding: 1%;
+    /* background-color: yellow; */
+    margin-bottom: 5%;
+}
+
+.build-section h1 {
+    font-size: 3rem;
+}
+
+.build-section p {
+    margin-left: 25%;
+    width: 50%;
+}
+
+
+
+.getButton {
+    -moz-box-shadow: 0px 0px 11px 0px #d7ded5;
+    -webkit-box-shadow: 0px 0px 11px 0px #d7ded5;
+    box-shadow: 0px 0px 11px 0px #d7ded5;
+    background-color: #faaff1;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #f5fff6;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 15px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.getButton:hover {
+    color: #faaff1;
+    background-color: white;
+}
+
+.getButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+.build-image {
+    grid-area: build-image;
+    /* background-color: cyan; */
+}
+
+.screen-mockup {
+    width: 100%;
+}
+
+
+
+
+
+/* Info Section */
+
+.info {
+    grid-area: info;
+    /* background-color: orange; */
+    margin: 10% 0;
+    margin-left: 5%;
+}
+
+.info p {
+    padding-right: 5%;
+}
+
+.info-image {
+    margin: 10% 0;
+    margin-right: 5%;
+    grid-area: info-image;
+    /* background-color: green; */
+}
+
+
+.illustration-yUs {
+    width: 100%;
+}
+
+
+
+
+
+/* Ready Section */
+
+.ready-section {
+    grid-area: ready-section;
+    text-align: center;
+    /* background-color: blue; */
+    margin: 5%;
+}
+
+.ready-section h1 {
+    font-size: 3rem;
+}
+
+
+/* Footer Section */
+.footer {
+    grid-area: footer;
+    /* width: 100%; to do problemu z grafika w footerze zeby byla rozciagnieta*/
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    font-size: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo-social logo-social logo-social logo-social""social-info contact-left-side contact-right-side subscribe""copyright copyright copyright copyright";
+}
+
+
+
+
+
+.logo-social {
+    grid-area: logo-social;
+    padding: 3%;
+    /* background-color: pink; */
+}
+
+.logoWhite {
+    filter: brightness(0) invert(1);
+}
+
+.social-info {
+    grid-area: social-info;
+    padding: 2%;
+    padding-left: 12%;
+    /* background-color: cyan; */
+}
+
+.social-info i {
+    margin-right: 5%;
+    font-size: 2rem;
+}
+
+.contact-left-side {
+    grid-area: contact-left-side;
+    padding: 2%;
+    padding-left: 12%;
+    /* background-color: brown; */
+}
+
+.contact-right-side {
+    grid-area: contact-right-side;
+    padding: 2%;
+    padding-left: 12%;
+    /* background-color: grey; */
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 4.5%;
+}
+
+
+.subscribe {
+    grid-area: subscribe;
+    padding: 2%;
+    padding-left: 12%;
+    /* background-color: purple; */
+}
+
+
+
+.input-email {
+    /* border-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
+    /* To samo co ponizej */
+
+    /* https://www.w3schools.com/css/css3_borders.asp */
+    /* Four values - border-radius: 15px 50px 30px 5px; (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner):  */
+
+    /* Three values - border-radius: 15px 50px 30px; (first value applies to top-left corner, second value applies to top-right and bottom-left corners, and third value applies to bottom-right corner): */
+
+    /* Two values - border-radius: 15px 50px; (first value applies to top-left and bottom-right corners, and the second value applies to top-right and bottom-left corners): */
+
+    /* One value - border-radius: 15px; (the value applies to all four corners, which are rounded equally: */
+
+    border-radius: 3px 0px 0px 3px;
+    padding: 1% 0;
+    padding-left: .5rem;
+    border: 1px solid white;
+    outline: none;
+
+}
+
+
+.input-submit-email {
+    border: 1px solid white;
+    border-radius: 0px 3px 3px 0px;
+    background: #faaff1;
+    color: white;
+    height: 1.5rem;
+    width: 10%;
+    text-align: center;
+    margin-left: -.25rem;
+    position: relative;
+
+    outline: none;
+
+}
+
+
+.copyright {
+    grid-area: copyright;
+    text-align: center;
+    padding: 3%;
+    background: url(/images/bg-footer-desktop.png);
+    background-repeat: no-repeat;
+    /*nie powtorzy kilka razy obrazka nawet jak bedzie miejsce  */
+    background-size: cover;
+    /* zajmie wszystko, zapelni przestrzen*/
+    /* https://developer.mozilla.org/pl/docs/Web/CSS/background-size https://css-tricks.com/perfect-full-page-background-image/ */
+    /* background-color: rgb(79, 128, 90); */
+}
+
+
+@media (max-width: 864px) {
+    .wrapper {
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "header-logo . header-button header-button""build-section build-section build-section build-section""build-image build-image build-image build-image""info info info info""info-image info-image info-image info-image""ready-section ready-section ready-section ready-section""footer footer footer footer";
+    }
+
+
+    .build-section {
+        padding: 5%;
+    }
+
+    .build-image {
+        padding: 5%;
+    }
+
+    .info {
+        margin: 0;
+        padding: 5%;
+    }
+
+    .info p {
+        padding: 0;
+    }
+
+    .info-image {
+        margin: 0;
+        padding: 5%;
+    }
+
+    .ready-section {
+        padding: 5%;
+    }
+
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "subscribe""logo-social""social-info""contact-left-side""contact-right-side""copyright";
+        padding: 5%;
+    }
+
+    .logo-social {
+        grid-area: logo-social;
+        margin-top: 5%;
+        padding: 3%;
+        /* background-color: pink; */
+    }
+
+    .logoWhite {
+        filter: brightness(0) invert(1);
+    }
+
+    .social-info {
+        padding: 3%;
+
+    }
+
+    .social-info i {
+        margin-right: 5%;
+        font-size: 2rem;
+    }
+
+    .contact-left-side {
+        padding: 3%;
+    }
+
+    .contact-right-side {
+        padding: 3%;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer ul li {
+        margin-bottom: 4.5%;
+    }
+
+
+    .subscribe {
+        padding: 3%;
+    }
+
+    .subscribe h1 {
+        font-size: 2rem;
+        margin-bottom: 1%;
+    }
+
+    .input-submit-email {
+        height: 1.8rem;
+    }
+
+}
